@@ -1,5 +1,6 @@
 #' @importFrom GenomicRanges GRanges
 #' @importFrom IRanges IRanges
+#' @importFrom plotly plotly
 create_GRanges_exon <- function(chr, start, end, strand, id, gene_id, 
                                 gene_symbol){
   

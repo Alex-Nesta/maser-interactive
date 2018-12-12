@@ -205,7 +205,7 @@ volcano <- function(events, type = c("A3SS", "A5SS", "SE", "RI", "MXE"),
         colors <-  c("grey","blue", "red")
     }
 
-    ggplot(plot.df, aes(x=deltaPSI, y=log10pval, colour=Status)) +
+    ggplotly(plot.df, aes(x=deltaPSI, y=log10pval, colour=Status)) +
         geom_point(aes(colour = Status)) +
         scale_colour_manual(values = colors) +
         theme_bw() +
