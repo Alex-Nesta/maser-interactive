@@ -205,7 +205,7 @@ volcano <- function(events, type = c("A3SS", "A5SS", "SE", "RI", "MXE"),
         colors <-  c("grey","blue", "red")
     }
 
-    ggplotly(plot.df, aes(x=deltaPSI, y=log10pval, colour=Status)) +
+    ggplotly(ggplot(plot.df, aes(x=deltaPSI, y=log10pval, colour=Status)) +
         geom_point(aes(colour = Status)) +
         scale_colour_manual(values = colors) +
         theme_bw() +
@@ -219,7 +219,7 @@ volcano <- function(events, type = c("A3SS", "A5SS", "SE", "RI", "MXE"),
               plot.background = element_blank()
         ) +
         labs(title="", x = "Log10 Adj. Pvalue",
-             y = "Delta PSI" )
+             y = "Delta PSI" ))
 }
 
 #' Dotplot representation of splicing events.
